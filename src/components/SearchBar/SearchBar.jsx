@@ -2,11 +2,6 @@ import { useState } from "react";
 import Style from "./SearchBar.modules.css"
 
 
-
-
-
-
-
 function SearchBar(props) {
 
    const [id, setId] = useState("");

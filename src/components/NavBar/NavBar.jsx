@@ -11,7 +11,11 @@ const NavBar = (props) => {
             <NavLink to="/about">
                 <button>About</button>
             </NavLink>
+            <NavLink to="/favoritos">
+                <button>Favoritos</button>
+            </NavLink>
             <SearchBar onSearch={props.onSearch} />
+       
         </div>
     )
 };

@@ -11,29 +11,27 @@ const Detail = (props) => {
 
     useEffect(() => {
         axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
-           if (data.name) {
-              setCharacter(data);
-           } else {
-              window.alert('No hay personajes con ese ID');
-           }
+            if (data.name) {
+                setCharacter(data);
+            } else {
+                window.alert('No hay personajes con ese ID');
+            }
         });
         return setCharacter({});
-     }, [id]);
+    }, [id]);
 
     return (
-    
-        <div className={style.contenedor}>
-        <Link to="/home">
-        <button>Atras</button>
-        </Link>
-            <h1>Detail</h1>
-            <h1>{character.name}</h1>
-            <p>{character.status}</p>
-            <p>{character.species}</p>
-            <p>{character.gender}</p>
-            <p>{character.origin?.name}</p>
-            <img src={character.image} alt={character.name}
-            />
+
+        <div className={style.container}>
+            <h1>DETAIL</h1>
+            <h2>{character.name}</h2>
+            <img src={character.image} alt={character.name} />
+            <h3>Origin | {character.origin?.name}</h3>
+            <h3>Specie | {character.species}</h3>
+            <h3>Gender | {character.gender}</h3>
+            <Link to={"/home"}>
+            <button >Volver</button>
+            </Link>
         </div>
     )
 }
