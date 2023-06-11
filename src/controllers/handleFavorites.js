@@ -12,3 +12,4 @@ const deleteFav = (req, res) => {
     return res.status(200).json(myFavorites)
 }
 module.exports = { postFav, deleteFav };
+

@@ -1,5 +1,5 @@
 const express = require("express")
-const getCharacterById = require("../controllers/getCharacterById");
+const getCharacterById = require("../controllers/getCharById");
 const { postFav, deleteFav } = require("../controllers/handleFavorites");
 const login = require("../controllers/login");
 const router = express.Router()
@@ -11,4 +11,4 @@ router.get("/login", login);
 router.post("/fav", postFav);
 router.delete("/fav/:id", deleteFav);
 
-module.exports = router;
+module.exports = router;   
